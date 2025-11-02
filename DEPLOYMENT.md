@@ -1,26 +1,42 @@
 # Deployment Guide - Job Organizer Reflex Edition
 
+## 📦 GitHub Repository
+
+- **URL:** https://github.com/juntoscolaborando-ukoquique/pyJOBS
+- **Branch:** main
+
+---
+
 ## 🚀 Deploying to Render
 
 ### Prerequisites
-- GitHub repository with your code
-- Render account (free tier available)
-- Backend API deployed and accessible
+- ✅ **GitHub repository:** https://github.com/juntoscolaborando-ukoquique/pyJOBS
+- ✅ **Code committed and pushed:** All files uploaded to GitHub
+- ⏳ **Render account:** Sign up at https://render.com (free tier available)
+- ⏳ **Backend API:** Your existing FastAPI backend URL
 
-### Step 1: Prepare Your Repository
+### Step 1: Prepare Backend API URL
 
-1. **Ensure all files are committed:**
-```bash
-git add .
-git commit -m "Refactor for production deployment"
-git push origin main
+You need your backend API URL for the Reflex app to connect to. This should be:
+- Your existing FastAPI backend (currently at `http://localhost:8000/api`)
+- If deploying backend to Render, it will be: `https://your-backend-name.onrender.com/api`
+
+**Example:** `https://job-organizer-api.onrender.com/api`
+
+### Step 2: Update render.yaml (Already Done)
+
+The `render.yaml` file is ready but needs your backend API URL:
+```yaml
+envVars:
+  - key: API_BASE_URL
+    value: https://your-backend-api.onrender.com/api  # UPDATE THIS
 ```
 
-2. **Required files for deployment:**
+### Step 3: Required Files (All Present)
 - ✅ `requirements.txt` - Python dependencies
 - ✅ `render.yaml` - Render configuration
 - ✅ `.env.example` - Environment variables template
-- ✅ Refactored code structure
+- ✅ Production-ready code structure
 
 ### Step 2: Configure Environment Variables
 

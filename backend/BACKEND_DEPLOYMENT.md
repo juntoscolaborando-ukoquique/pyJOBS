@@ -46,7 +46,7 @@ Deployment:
 - Database auto-initialization"
 
 # Push to GitHub (use existing pyJobOrganizer repo or create new one)
-git remote add origin git@github.com:corbellinipersonal-aps/pyJobOrganizer.git
+git remote add origin git@github.com:juntoscolaborando-ukoquique/pyJOBS.git
 git push origin main
 ```
 
@@ -63,7 +63,7 @@ git add .
 git commit -m "Initial commit: Job Organizer FastAPI Backend"
 
 # Create new repo: pyJobOrganizer-Backend
-git remote add origin git@github.com:corbellinipersonal-aps/pyJobOrganizer-Backend.git
+git remote add origin git@github.com:juntoscolaborando-ukoquique/pyJOBS-Backend.git
 git push -u origin main
 ```
 
