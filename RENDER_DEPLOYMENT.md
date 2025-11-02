@@ -12,8 +12,22 @@ Your Job Organizer is ready to deploy to Render! Follow these steps to get it li
 - ✅ **Code Pushed:** All files committed and uploaded
 - ✅ **render.yaml:** Configuration file ready
 - ✅ **requirements.txt:** Dependencies listed
-- ⏳ **Render Account:** Create at https://render.com
-- ⏳ **Backend API URL:** Your FastAPI backend endpoint
+- ✅ **Render Account:** Created
+- ✅ **Database:** job-organizer-db (dpg-d43t22re5dus73aakkt0-a)
+
+---
+
+## 🗄️ Database Credentials
+
+**Database Name:** `job-organizer-db`  
+**Database ID:** `dpg-d43t22re5dus73aakkt0-a`
+
+**Internal Connection String:**
+```
+postgresql://job_organizer_user:YMNJsnKmOS6zDXziutmWbv5fDBw6h0Gy@dpg-d43t22re5dus73aakkt0-a/job_organizer
+```
+
+**Use this connection string for the `DATABASE_URL` environment variable in the backend service.**
 
 ---
 
@@ -37,11 +51,11 @@ Your Job Organizer is ready to deploy to Render! Follow these steps to get it li
 2. **Connect GitHub:**
    - Click **"Connect GitHub"**
    - Authorize Render to access your repositories
-   - Select **"corbellinipersonal-aps"** organization
-   - Grant access to **"pyJobOrganizer"** repository
+   - Select **"juntoscolaborando-ukoquique"** organization
+   - Grant access to **"pyJOBS"** repository
 
 3. **Select Repository:**
-   - Choose **"pyJobOrganizer"** from the list
+   - Choose **"pyJOBS"** from the list
    - Render will detect `render.yaml` automatically
 
 ### Step 3: Configure Backend API URL
