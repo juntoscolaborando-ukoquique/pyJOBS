@@ -27,6 +27,9 @@ if is_production():
     DATABASE_URL = os.getenv("DATABASE_URL")
     if not DATABASE_URL:
         raise ValueError("DATABASE_URL must be set in production")
+    # Convert postgresql:// to postgresql+asyncpg:// for async driver
+    if DATABASE_URL.startswith("postgresql://"):
+        DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://", 1)
 else:
     # Development: Use local PostgreSQL
     DATABASE_URL = os.getenv(
