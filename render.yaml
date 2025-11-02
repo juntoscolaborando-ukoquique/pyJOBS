@@ -54,12 +54,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: API_BASE_URL
-        fromService:
-          type: web
-          name: job-organizer-api
-          envVarKey: RENDER_EXTERNAL_URL
-          property: host
-        sync: false
+        value: https://job-organizer-api.onrender.com/api
       - key: ENVIRONMENT
         value: production
       - key: DEBUG
