@@ -3,6 +3,7 @@ import os
 
 config = rx.Config(
     app_name="job_organizer",
-    frontend_port=3000,
-    backend_port=int(os.getenv("PORT", "8001")),
+    frontend_port=int(os.getenv("PORT", "3000")),
+    backend_port=int(os.getenv("BACKEND_PORT", "8001")),
+    disable_plugins=["reflex.plugins.sitemap.SitemapPlugin"],
 )
