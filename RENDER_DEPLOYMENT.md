@@ -213,6 +213,29 @@ App running at: http://0.0.0.0:8000
 
 ## 🐛 Troubleshooting
 
+### Warning: Invalid Node.js Version Detection
+
+**Problem:** Reflex shows warning about invalid Node.js version during build
+```
+Warning: The detected version of /home/render/envwrappers/node (Invalid version: '::render::starttraceinternal::...')
+```
+
+**Cause:** Render's internal logging interferes with Node.js version detection
+
+**Impact:** 
+- ⚠️ Warning only - does not break the build
+- Node.js 22.16.0 is still installed and used correctly
+- Can be safely ignored
+
+**Solution (Optional):**
+To suppress this warning in future builds, you can:
+1. Pin Node.js version in `package.json` (if you create one)
+2. Or accept the warning - it doesn't affect functionality
+
+**Status:** Non-critical - app works correctly despite warning
+
+---
+
 ### Build Fails: "ModuleNotFoundError"
 
 **Problem:** Missing dependencies
